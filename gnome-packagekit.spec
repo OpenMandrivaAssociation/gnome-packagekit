@@ -12,6 +12,7 @@ BuildRequires:	policykit-gnome-devel
 BuildRequires:	libsexy-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
+BuildRequires:	gnome-doc-utils
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxslt-proc
 Requires:	packagekit
