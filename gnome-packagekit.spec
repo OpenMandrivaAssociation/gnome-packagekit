@@ -1,7 +1,7 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	0.2.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
@@ -23,6 +23,7 @@ gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
 
 %prep
 %setup -q
+sed -i -e 's#system-software-installer#system-software-install#' data/*.desktop.in
 
 %build
 %configure2_5x --disable-static --disable-schemas-install --disable-scrollkeeper
