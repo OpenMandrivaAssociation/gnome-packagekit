@@ -1,13 +1,13 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	0.2.4
-Release:	%mkrel 2
+Version:	0.3.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	packagekit-devel
+BuildRequires:	packagekit-devel = %version
 BuildRequires:	policykit-gnome-devel
 BuildRequires:	libsexy-devel
 BuildRequires:	libnotify-devel
@@ -16,7 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	gnome-doc-utils
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxslt-proc
-Requires:	packagekit
+Requires:	packagekit = %version
 
 %description
 gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
