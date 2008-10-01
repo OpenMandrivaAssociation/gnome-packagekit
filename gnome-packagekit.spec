@@ -15,6 +15,7 @@ BuildRequires:	libglade2-devel
 BuildRequires:	intltool
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-utils
+BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxslt-proc
 Requires:	packagekit = %version
@@ -37,6 +38,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%preun
+%preun_uninstall_gconf_schemas %name
 
 %files -f %name.lang
 %defattr(-, root, root)
