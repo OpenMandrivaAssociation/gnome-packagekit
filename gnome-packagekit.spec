@@ -14,6 +14,7 @@ BuildRequires:	libnotify-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	intltool
 BuildRequires:	gnome-doc-utils
+BuildRequires:	docbook-utils
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxslt-proc
 Requires:	packagekit = %version
