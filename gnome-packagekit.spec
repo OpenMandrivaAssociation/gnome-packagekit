@@ -49,6 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_datadir}/gnome/autostart/gpk-update-icon.desktop
 %{_datadir}/applications/*.desktop
+%{python_sitelib}/packagekit/g*
 %{_datadir}/omf/%name
 %{_iconsdir}/hicolor/*/*/*
 %{_mandir}/man1/*
