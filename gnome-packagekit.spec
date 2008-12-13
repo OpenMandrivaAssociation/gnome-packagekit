@@ -12,6 +12,7 @@ BuildRequires:	policykit-gnome-devel
 BuildRequires:	libsexy-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	libglade2-devel
+BuildRequires:	gnome-menus-devel
 BuildRequires:	intltool
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-utils
