@@ -10,7 +10,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.3.11
 BuildRequires:	policykit-gnome-devel >= 0.8
 BuildRequires:	libsexy-devel >= 0.1.10
-BuildRequires:	libnotify-devel >=0.4.3
+BuildRequires:	libnotify-devel >= 0.4.3
 BuildRequires:	libglade2-devel >= 2.5.0
 BuildRequires:	gnome-menus-devel >= 2.24.1
 BuildRequires:	intltool > 0.35.0
