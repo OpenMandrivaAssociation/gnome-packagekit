@@ -1,24 +1,25 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	0.4.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.3.11
-BuildRequires:	policykit-gnome-devel
-BuildRequires:	libsexy-devel
-BuildRequires:	libnotify-devel
-BuildRequires:	libglade2-devel
-BuildRequires:	gnome-menus-devel
-BuildRequires:	intltool
+BuildRequires:	policykit-gnome-devel >= 0.8
+BuildRequires:	libsexy-devel >= 0.1.10
+BuildRequires:	libnotify-devel >=0.4.3
+BuildRequires:	libglade2-devel >= 2.5.0
+BuildRequires:	gnome-menus-devel >= 2.24.1
+BuildRequires:	intltool > 0.35.0
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-utils
 BuildRequires:	docbook-dtd41-sgml
-BuildRequires:	libGConf2-devel
+BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
+BuildRequires:	unique-devel >= 0.9.4
 Requires:	packagekit = %version
 
 %description
