@@ -7,7 +7,7 @@ Group:		System/Configuration/Packaging
 Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	packagekit-devel >= 0.3.11
+BuildRequires:	packagekit-devel >= 0.4.4
 BuildRequires:	policykit-gnome-devel >= 0.8
 BuildRequires:	libsexy-devel >= 0.1.10
 BuildRequires:	libnotify-devel >= 0.4.3
