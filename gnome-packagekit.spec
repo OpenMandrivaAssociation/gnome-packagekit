@@ -1,6 +1,6 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	0.4.5
+Version:	2.27.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -20,7 +20,7 @@ BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
-Requires:	packagekit = %version
+Requires:	packagekit >= 0.4.4
 
 %description
 gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
