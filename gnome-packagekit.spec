@@ -20,6 +20,8 @@ BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
+BuildRequires:	libdevkit-gobject-devel >= 001
+BuildRequires:	devicekit-power-devel >= 007
 Requires:	packagekit >= 0.4.4
 
 %description
