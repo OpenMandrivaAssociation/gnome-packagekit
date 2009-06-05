@@ -7,7 +7,7 @@ Group:		System/Configuration/Packaging
 Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	packagekit-devel >= 0.4.4
+BuildRequires:	packagekit-devel >= 0.4.8
 BuildRequires:	policykit-gnome-devel >= 0.8
 BuildRequires:	libsexy-devel >= 0.1.10
 BuildRequires:	libnotify-devel >= 0.4.3
@@ -22,7 +22,8 @@ BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
 BuildRequires:	libdevkit-gobject-devel >= 001
 BuildRequires:	devicekit-power-devel >= 007
-Requires:	packagekit >= 0.4.4
+BuildRequires:	libcanberra-devel >= 0.10
+Requires:	packagekit >= 0.4.8
 
 %description
 gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
