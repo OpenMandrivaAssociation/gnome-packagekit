@@ -1,10 +1,10 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	2.27.5
+Version:	2.28.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-Source0: 	http://www.packagekit.org/releases/%name-%version.tar.gz
+Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.28/%name-%version.tar.bz2
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.4.8
