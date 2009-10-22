@@ -1,6 +1,6 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	2.28.0
+Version:	2.28.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
