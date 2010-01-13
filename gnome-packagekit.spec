@@ -1,7 +1,7 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	2.29.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.28/%name-%version.tar.bz2
@@ -28,7 +28,9 @@ gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
 Summary:        Common files and services for GNOME PackageKit
 Group:          System/Configuration/Packaging
 Requires:	packagekit >= 0.4.8
+Provides:	packagekit-gui
 Conflicts:	gnome-packagekit < 2.29.2
+Conflicts:	kpackagekit
 
 %description common
 Common files and services used by GNOME PackageKit. This packages provides
