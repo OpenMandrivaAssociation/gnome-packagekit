@@ -7,7 +7,7 @@ Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.28/%name-%version.tar.bz2
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	packagekit-devel >= 0.5.5
+BuildRequires:	packagekit-devel >= 0.6.1
 BuildRequires:	libnotify-devel >= 0.4.3
 BuildRequires:	gnome-menus-devel >= 2.24.1
 BuildRequires:	intltool > 0.35.0
@@ -19,6 +19,7 @@ BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
 BuildRequires:	devicekit-power-devel >= 007
 BuildRequires:	libcanberra-devel >= 0.10
+BuildRequires:	libgudev-devel
 Requires: %{name}-common = %{version}-%{release}
 
 %description
