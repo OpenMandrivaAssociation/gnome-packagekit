@@ -4,7 +4,7 @@ Version:	2.29.91
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.29/%name-%version.tar.bz2
+Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.6.1
@@ -18,7 +18,11 @@ BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
 BuildRequires:	libcanberra-devel >= 0.10
-BuildRequires:	UPower-devel >= 007
+%if %mdkversion > 201000
+BuildRequires:	UPower-devel
+%else
+BuildRequires:	devicekit-power-devel >= 007
+%endif
 BuildRequires:	libgudev-devel
 Requires: %{name}-common = %{version}-%{release}
 
