@@ -1,10 +1,10 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	2.29.3
+Version:	2.29.91
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.28/%name-%version.tar.bz2
+Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/2.29/%name-%version.tar.bz2
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.6.1
@@ -17,8 +17,8 @@ BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
-BuildRequires:	devicekit-power-devel >= 007
 BuildRequires:	libcanberra-devel >= 0.10
+BuildRequires:	UPower-devel >= 007
 BuildRequires:	libgudev-devel
 Requires: %{name}-common = %{version}-%{release}
 
