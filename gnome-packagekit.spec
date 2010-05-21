@@ -1,10 +1,12 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	2.30.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
+# (fc) 2.30.1-2mdv disable font install support
+Patch0:		gnome-packagekit-2.30.1-disable-font-install.patch
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.6.1
@@ -52,6 +54,7 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 
 %prep
 %setup -q
+%patch0 -p1 -b .disable-font-install
 
 %build
 %configure2_5x --disable-static --disable-schemas-install --disable-scrollkeeper
