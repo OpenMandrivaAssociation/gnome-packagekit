@@ -1,7 +1,7 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	2.30.3
-Release:	%mkrel 3
+Version:	2.31.6
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
@@ -58,16 +58,16 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 
 %build
 %configure2_5x --disable-static --disable-schemas-install --disable-scrollkeeper
-%make
+make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang %name --with-gnome
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %preun
 %preun_uninstall_gconf_schemas %name
