@@ -19,7 +19,7 @@ BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel >= 0.22
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
-BuildRequires:	libcanberra-devel >= 0.10
+BuildRequires:	libcanberra-gtk-devel >= 0.10
 %if %mdkversion > 201000
 BuildRequires:	UPower-devel
 %else
