@@ -7,19 +7,22 @@ Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
 # (fc) 2.30.1-2mdv disable font install support
 Patch0:		gnome-packagekit-2.30.1-disable-font-install.patch
+Patch1:		gnome-packagekit-2.32.0-libnotify-0.7.patch
 URL:		http://www.packagekit.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.6.1
-BuildRequires:	libnotify-devel >= 0.4.3
+BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	gnome-menus-devel >= 2.24.1
 BuildRequires:	intltool > 0.35.0
 BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-utils
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	libGConf2-devel >= 0.22
+BuildRequires:	GConf2
 BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
 BuildRequires:	libcanberra-gtk-devel >= 0.10
+BuildRequires:	gnome-common
 %if %mdkversion > 201000
 BuildRequires:	UPower-devel
 %else
@@ -55,11 +58,13 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 %prep
 %setup -q
 %patch0 -p1 -b .disable-font-install
+%patch1 -p1 -b .libnotify
 
 # .deb can't be installed in Mandriva
 sed -i 's,application/x-deb;,,' data/gpk-install-file.desktop.in
 
 %build
+NOCONFIGURE=yes gnome-autogen.sh
 %configure2_5x --disable-static --disable-schemas-install --disable-scrollkeeper
 make
 
