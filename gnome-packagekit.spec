@@ -23,6 +23,8 @@ BuildRequires:	libxslt-proc
 BuildRequires:	unique-devel >= 0.9.4
 BuildRequires:	libcanberra-gtk-devel >= 0.10
 BuildRequires:	gnome-common
+BuildRequires:	gtk-doc
+BuildRequires:	intltool
 %if %mdkversion > 201000
 BuildRequires:	UPower-devel
 %else
