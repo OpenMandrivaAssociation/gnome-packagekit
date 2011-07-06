@@ -1,7 +1,7 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	2.32.0
-Release:	%mkrel 4
+Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
@@ -9,7 +9,6 @@ Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version
 Patch0:		gnome-packagekit-2.30.1-disable-font-install.patch
 Patch1:		gnome-packagekit-2.32.0-libnotify-0.7.patch
 URL:		http://www.packagekit.org
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	packagekit-devel >= 0.6.1
 BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	gnome-menus-devel >= 2.24.1
@@ -31,29 +30,29 @@ BuildRequires:	UPower-devel
 BuildRequires:	devicekit-power-devel >= 007
 %endif
 BuildRequires:	libgudev-devel
-Requires: %{name}-common = %{version}-%{release}
+Requires:	%{name}-common = %{EVRD}
 
 %description
 gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
 
-%package common
+%package	common
 Summary:        Common files and services for GNOME PackageKit
 Group:          System/Configuration/Packaging
 Requires:	packagekit >= 0.4.8
 Provides:	packagekit-gui
 Conflicts:	gnome-packagekit < 2.29.2
 
-%description common
+%description	common
 Common files and services used by GNOME PackageKit. This packages provides
 D-Bus service for packages installation.
 
-%package extra
-Summary: Session applications to manage packages with GNOME PackageKit (extra bits)
+%package	extra
+Summary:	Session applications to manage packages with GNOME PackageKit (extra bits)
 Group:          System/Configuration/Packaging
-Requires: %{name} = %{version}-%{release}
+Requires:	%{name} = %{EVRD}
 Conflicts:	gnome-packagekit < 2.29.2
 
-%description extra
+%description	extra
 Extra GNOME applications for using PackageKit that are not normally needed.
 
 %prep
@@ -70,20 +69,15 @@ NOCONFIGURE=yes gnome-autogen.sh
 make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%find_lang %name --with-gnome
-
-%clean
-rm -rf %{buildroot}
+%find_lang %{name} --with-gnome
 
 %preun
-%preun_uninstall_gconf_schemas %name
+%preun_uninstall_gconf_schemas %{name}
 
-%files common -f %name.lang
-%defattr(-, root, root)
-%{_sysconfdir}/gconf/schemas/%name.schemas
+%files common -f %{name}.lang
+%{_sysconfdir}/gconf/schemas/%{name}.schemas
 %{_bindir}/gpk-install-*
 %{_bindir}/gpk-dbus-service
 %dir %{_datadir}/gnome-packagekit
@@ -92,7 +86,7 @@ rm -rf %{buildroot}
 %{_datadir}/gnome-packagekit/gpk-eula.ui
 %{_datadir}/gnome-packagekit/gpk-signature.ui
 %{_datadir}/gnome-packagekit/icons
-%{_datadir}/omf/%name
+%{_datadir}/omf/%{name}
 %{_iconsdir}/hicolor/*/*/*
 %{_mandir}/man1/gpk-install-*
 %{_mandir}/man1/gpk-backend-status*
@@ -100,7 +94,6 @@ rm -rf %{buildroot}
 %{_datadir}/applications/gpk-install-*.desktop
 
 %files 
-%defattr(-, root, root)
 %{_bindir}/gpk-application
 %{_bindir}/gpk-log
 %{_bindir}/gpk-prefs
@@ -122,7 +115,6 @@ rm -rf %{buildroot}
 %{_datadir}/gnome-packagekit/gpk-log.ui
 
 %files extra
-%defattr(-, root, root)
 %{_bindir}/gpk-backend-status
 %{_bindir}/gpk-service-pack
 %{_datadir}/applications/gpk-log.desktop
