@@ -66,7 +66,7 @@ sed -i 's,application/x-deb;,,' data/gpk-install-file.desktop.in
 %build
 NOCONFIGURE=yes gnome-autogen.sh
 %configure2_5x --disable-static --disable-schemas-install --disable-scrollkeeper
-make
+%make
 
 %install
 %makeinstall_std
