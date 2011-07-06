@@ -5,8 +5,6 @@ Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.bz2
-# (fc) 2.30.1-2mdv disable font install support
-Patch0:		gnome-packagekit-2.30.1-disable-font-install.patch
 Patch1:		gnome-packagekit-2.32.0-libnotify-0.7.patch
 URL:		http://www.packagekit.org
 BuildRequires:	packagekit-devel >= 0.6.1
@@ -57,7 +55,6 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 
 %prep
 %setup -q
-%patch0 -p1 -b .disable-font-install
 %patch1 -p1 -b .libnotify
 
 # .deb can't be installed in Mandriva
