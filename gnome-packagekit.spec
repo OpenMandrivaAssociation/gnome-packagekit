@@ -42,7 +42,6 @@ Group:          System/Configuration/Packaging
 Requires:	packagekit >= 0.4.8
 Provides:	packagekit-gui
 Conflicts:	gnome-packagekit < 2.29.2
-Conflicts:	kpackagekit
 
 %description common
 Common files and services used by GNOME PackageKit. This packages provides
