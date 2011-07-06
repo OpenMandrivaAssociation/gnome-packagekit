@@ -91,7 +91,6 @@ rm -rf %{buildroot}
 %{_datadir}/gnome-packagekit/gpk-client.ui
 %{_datadir}/gnome-packagekit/gpk-error.ui
 %{_datadir}/gnome-packagekit/gpk-eula.ui
-%{_datadir}/gnome-packagekit/gpk-update-viewer.ui
 %{_datadir}/gnome-packagekit/gpk-signature.ui
 %{_datadir}/gnome-packagekit/icons
 %{_datadir}/omf/%name
