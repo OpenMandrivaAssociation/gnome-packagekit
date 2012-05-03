@@ -1,6 +1,6 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	3.2.1
+Version:	3.4.0
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -64,7 +64,6 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 %files common -f %{name}.lang
 %{_bindir}/gpk-install-*
 %{_bindir}/gpk-dbus-service
-%{_libexecdir}/gnome-settings-daemon-3.0/gtk-modules/gpk-pk-gtk-module.desktop
 %{_datadir}/applications/gpk-dbus-service.desktop
 %{_datadir}/applications/gpk-install-*.desktop
 %{_datadir}/dbus-1/services/*.service
