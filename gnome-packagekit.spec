@@ -7,12 +7,12 @@ Group:		System/Configuration/Packaging
 URL:		http://www.packagekit.org
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%name-%version.tar.xz
 
-BuildRequires:	gnome-doc-utils
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	docbook-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool > 0.35.0
 BuildRequires:	xsltproc
+BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libcanberra-gtk3)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(gudev-1.0)
