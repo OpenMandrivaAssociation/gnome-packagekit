@@ -1,7 +1,7 @@
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
 Version:	3.4.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		http://www.packagekit.org
@@ -58,6 +58,10 @@ Extra GNOME applications for using PackageKit that are not normally needed.
 
 %install
 %makeinstall_std
+
+# hack around apper conflict
+mv %{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.PackageKit.service \
+%{buildroot}%{_datadir}/dbus-1/services/gnome-org.freedesktop.PackageKit.service
 
 %find_lang %{name} --with-gnome
 
