@@ -2,8 +2,8 @@
 
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	3.6.1
-Release:	8
+Version:	3.14.0
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Url:		http://www.packagekit.org
@@ -23,7 +23,7 @@ BuildRequires:	pkgconfig(packagekit-glib2)
 BuildRequires:	pkgconfig(unique-1.0)
 BuildRequires:	pkgconfig(upower-glib)
 Requires:	%{name}-common = %{EVRD}
-
+Obsoletes:	packagekit-extra
 %description
 gnome-packagekit are PackageKit client programs designed for the GNOME desktop.
 
@@ -36,14 +36,6 @@ Provides:	packagekit-gui
 %description	common
 Common files and services used by GNOME PackageKit. This packages provides
 D-Bus service for packages installation.
-
-%package	extra
-Summary:	Session applications to manage packages with GNOME PackageKit (extra bits)
-Group:		System/Configuration/Packaging
-Requires:	%{name} = %{EVRD}
-
-%description	extra
-Extra GNOME applications for using PackageKit that are not normally needed.
 
 %prep
 %setup -q
@@ -81,31 +73,24 @@ mv %{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.PackageKit.service \
 %{_datadir}/gnome-packagekit/icons
 %{_iconsdir}/hicolor/*/*/*
 %{_mandir}/man1/gpk-install-*
-%{_mandir}/man1/gpk-backend-status*
 
 %files 
 %{_bindir}/gpk-application
-%{_bindir}/gpk-distro-upgrade
 %{_bindir}/gpk-log
 %{_bindir}/gpk-prefs
 %{_bindir}/gpk-update-*
+%{_datadir}/appdata/gpk*.xml
 %{_datadir}/applications/gpk-application.desktop
-%{_datadir}/applications/gpk-distro-upgrade.desktop
 %{_datadir}/applications/gpk-prefs.desktop
 %{_datadir}/applications/gpk-update-viewer.desktop
 %{_datadir}/gnome-packagekit/gpk-application.ui
 %{_datadir}/gnome-packagekit/gpk-prefs.ui
 %{_datadir}/gnome-packagekit/gpk-update-viewer.ui
 %{_datadir}/gnome-packagekit/gpk-log.ui
-%{python_sitelib}/packagekit/g*
 %{_mandir}/man1/gpk-application*
 %{_mandir}/man1/gpk-prefs*
-%{_mandir}/man1/gpk-repo*
 %{_mandir}/man1/gpk-update*
-
-%files extra
-%{_bindir}/gpk-service-pack
+%{_mandir}/man1/gpk-log*
+%{_mandir}/man1/gpk-dbus-service*
 %{_datadir}/applications/gpk-log.desktop
-%{_datadir}/applications/gpk-service-pack.desktop
-%{_datadir}/gnome-packagekit/gpk-service-pack.ui
 

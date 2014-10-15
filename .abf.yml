@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   gnome-packagekit-3.6.1.tar.xz: 8d54377da78db3db27ff416b35b3db29a378eb7b
+sources:
+  gnome-packagekit-3.14.0.tar.xz: 88dc97cc0d2f5a7af2669c5a33c53857c06a9030
