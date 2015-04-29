@@ -43,17 +43,12 @@ D-Bus service for packages installation.
 
 %build
 %configure \
-	--disable-static \
 	--disable-scrollkeeper
 
 %make
 
 %install
 %makeinstall_std
-
-# hack around apper conflict
-mv %{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.PackageKit.service \
-%{buildroot}%{_datadir}/dbus-1/services/gnome-org.freedesktop.PackageKit.service
 
 %find_lang %{name} --with-gnome
 
@@ -62,7 +57,6 @@ mv %{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.PackageKit.service \
 %{_bindir}/gpk-dbus-service
 %{_datadir}/applications/gpk-dbus-service.desktop
 %{_datadir}/applications/gpk-install-*.desktop
-%{_datadir}/dbus-1/services/*.service
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %dir %{_datadir}/gnome-packagekit
