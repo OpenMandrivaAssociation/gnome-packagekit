@@ -2,7 +2,7 @@
 
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	3.14.0
+Version:	 3.16.0
 Release:	3
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -74,7 +74,7 @@ mv %{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.PackageKit.service \
 %{_iconsdir}/hicolor/*/*/*
 %{_mandir}/man1/gpk-install-*
 
-%files 
+%files
 %{_bindir}/gpk-application
 %{_bindir}/gpk-log
 %{_bindir}/gpk-prefs
