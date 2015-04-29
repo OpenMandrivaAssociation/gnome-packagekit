@@ -53,9 +53,6 @@ D-Bus service for packages installation.
 %find_lang %{name} --with-gnome
 
 %files common -f %{name}.lang
-%{_bindir}/gpk-install-*
-%{_bindir}/gpk-dbus-service
-%{_datadir}/applications/gpk-dbus-service.desktop
 %{_datadir}/applications/gpk-install-*.desktop
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
@@ -66,7 +63,6 @@ D-Bus service for packages installation.
 %{_datadir}/gnome-packagekit/gpk-signature.ui
 %{_datadir}/gnome-packagekit/icons
 %{_iconsdir}/hicolor/*/*/*
-%{_mandir}/man1/gpk-install-*
 
 %files
 %{_bindir}/gpk-application
@@ -85,6 +81,5 @@ D-Bus service for packages installation.
 %{_mandir}/man1/gpk-prefs*
 %{_mandir}/man1/gpk-update*
 %{_mandir}/man1/gpk-log*
-%{_mandir}/man1/gpk-dbus-service*
 %{_datadir}/applications/gpk-log.desktop
 
