@@ -14,6 +14,7 @@ BuildRequires:	docbook-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool > 0.35.0
 BuildRequires:	itstool
+BuildRequires:	meson
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libcanberra-gtk3)
@@ -42,13 +43,11 @@ D-Bus service for packages installation.
 %apply_patches
 
 %build
-%configure \
-	--disable-scrollkeeper
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %{name} --with-gnome
 
