@@ -2,8 +2,8 @@
 
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	 3.18.0
-Release:	5
+Version:	3.28.0
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Url:		http://www.packagekit.org
