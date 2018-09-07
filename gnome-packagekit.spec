@@ -23,6 +23,7 @@ BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(packagekit-glib2)
 BuildRequires:	pkgconfig(unique-1.0)
 BuildRequires:	pkgconfig(upower-glib)
+BuildRequires:	pkgconfig(systemd)
 Requires:	%{name}-common = %{EVRD}
 Obsoletes:	packagekit-extra
 %description
