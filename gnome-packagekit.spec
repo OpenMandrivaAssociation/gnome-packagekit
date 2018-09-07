@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(unique-1.0)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	pkgconfig(systemd)
 BuildRequires:	pkgconfig(polkit-gobject-1)
+BuildRequires:  gcc
 Requires:	%{name}-common = %{EVRD}
 Obsoletes:	packagekit-extra
 %description
