@@ -46,7 +46,6 @@ D-Bus service for packages installation.
 %apply_patches
 
 %build
-export CPPFLAGS=-I/usr/include/sys/cdefs.h
 %meson
 %meson_build
 
