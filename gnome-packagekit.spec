@@ -60,10 +60,10 @@ export CPPFLAGS=-I/usr/include/sys/cdefs.h
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %dir %{_datadir}/gnome-packagekit
-%{_datadir}/gnome-packagekit/gpk-client.ui
-%{_datadir}/gnome-packagekit/gpk-error.ui
-%{_datadir}/gnome-packagekit/gpk-eula.ui
-%{_datadir}/gnome-packagekit/gpk-signature.ui
+#{_datadir}/gnome-packagekit/gpk-client.ui
+#{_datadir}/gnome-packagekit/gpk-error.ui
+#{_datadir}/gnome-packagekit/gpk-eula.ui
+#{_datadir}/gnome-packagekit/gpk-signature.ui
 %{_datadir}/gnome-packagekit/icons
 %{_iconsdir}/hicolor/*/*/*
 
