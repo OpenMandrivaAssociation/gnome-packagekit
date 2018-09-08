@@ -73,6 +73,8 @@ export CPPFLAGS=-I/usr/include/sys/cdefs.h
 %{_bindir}/gpk-prefs
 %{_bindir}/gpk-update-*
 #{_datadir}/appdata/gpk*.xml
+%{_datadir}/applications/org.gnome.Packages.desktop
+%{_datadir}/applications/org.gnome.PackageUpdater.desktop
 #{_datadir}/applications/gpk-application.desktop
 %{_datadir}/applications/gpk-prefs.desktop
 #{_datadir}/applications/gpk-update-viewer.desktop
@@ -85,4 +87,5 @@ export CPPFLAGS=-I/usr/include/sys/cdefs.h
 %{_mandir}/man1/gpk-update*
 %{_mandir}/man1/gpk-log*
 %{_datadir}/applications/gpk-log.desktop
+%{_datadir}/metainfo/*gnome*.appdata.xml
 
