@@ -2,8 +2,8 @@
 
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	 3.18.0
-Release:	5
+Version:	3.28.0
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 Url:		http://www.packagekit.org
@@ -14,6 +14,7 @@ BuildRequires:	docbook-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool > 0.35.0
 BuildRequires:	itstool
+BuildRequires:	meson
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libcanberra-gtk3)
@@ -22,6 +23,9 @@ BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(packagekit-glib2)
 BuildRequires:	pkgconfig(unique-1.0)
 BuildRequires:	pkgconfig(upower-glib)
+BuildRequires:	pkgconfig(systemd)
+BuildRequires:	pkgconfig(polkit-gobject-1)
+BuildRequires:  glibc-devel
 Requires:	%{name}-common = %{EVRD}
 Obsoletes:	packagekit-extra
 %description
@@ -42,13 +46,12 @@ D-Bus service for packages installation.
 %apply_patches
 
 %build
-%configure \
-	--disable-scrollkeeper
-
-%make
+export CPPFLAGS=-I/usr/include/sys/cdefs.h
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %{name} --with-gnome
 
@@ -57,10 +60,10 @@ D-Bus service for packages installation.
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %dir %{_datadir}/gnome-packagekit
-%{_datadir}/gnome-packagekit/gpk-client.ui
-%{_datadir}/gnome-packagekit/gpk-error.ui
-%{_datadir}/gnome-packagekit/gpk-eula.ui
-%{_datadir}/gnome-packagekit/gpk-signature.ui
+#{_datadir}/gnome-packagekit/gpk-client.ui
+#{_datadir}/gnome-packagekit/gpk-error.ui
+#{_datadir}/gnome-packagekit/gpk-eula.ui
+#{_datadir}/gnome-packagekit/gpk-signature.ui
 %{_datadir}/gnome-packagekit/icons
 %{_iconsdir}/hicolor/*/*/*
 
@@ -69,17 +72,20 @@ D-Bus service for packages installation.
 %{_bindir}/gpk-log
 %{_bindir}/gpk-prefs
 %{_bindir}/gpk-update-*
-%{_datadir}/appdata/gpk*.xml
-%{_datadir}/applications/gpk-application.desktop
+#{_datadir}/appdata/gpk*.xml
+%{_datadir}/applications/org.gnome.Packages.desktop
+%{_datadir}/applications/org.gnome.PackageUpdater.desktop
+#{_datadir}/applications/gpk-application.desktop
 %{_datadir}/applications/gpk-prefs.desktop
-%{_datadir}/applications/gpk-update-viewer.desktop
-%{_datadir}/gnome-packagekit/gpk-application.ui
-%{_datadir}/gnome-packagekit/gpk-prefs.ui
-%{_datadir}/gnome-packagekit/gpk-update-viewer.ui
-%{_datadir}/gnome-packagekit/gpk-log.ui
+#{_datadir}/applications/gpk-update-viewer.desktop
+#{_datadir}/gnome-packagekit/gpk-application.ui
+#{_datadir}/gnome-packagekit/gpk-prefs.ui
+#{_datadir}/gnome-packagekit/gpk-update-viewer.ui
+#{_datadir}/gnome-packagekit/gpk-log.ui
 %{_mandir}/man1/gpk-application*
 %{_mandir}/man1/gpk-prefs*
 %{_mandir}/man1/gpk-update*
 %{_mandir}/man1/gpk-log*
 %{_datadir}/applications/gpk-log.desktop
+%{_datadir}/metainfo/*gnome*.appdata.xml
 
