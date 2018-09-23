@@ -3,5 +3,6 @@ removed_sources:
   gnome-packagekit-3.16.0.tar.xz: 519105cbf479e134a779ac2c441988d338e5ba2f
   gnome-packagekit-3.6.1.tar.xz: 8d54377da78db3db27ff416b35b3db29a378eb7b
   gnome-packagekit-3.18.0.tar.xz: 23ff677602c6310fce1aab0f42f21f86757afdab
-sources:
   gnome-packagekit-3.28.0.tar.xz: 7c417372d3a1a85ac9db39aa4d4b976868a52162
+sources:
+  gnome-packagekit-3.30.0.tar.xz: 63efec553b704005ce0c868c185ce725bcbb849f
