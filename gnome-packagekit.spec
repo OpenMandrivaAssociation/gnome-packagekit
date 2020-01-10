@@ -43,7 +43,7 @@ D-Bus service for packages installation.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %meson
