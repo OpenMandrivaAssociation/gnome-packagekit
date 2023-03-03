@@ -2,7 +2,7 @@
 
 Summary:	A PackageKit client for the GNOME desktop
 Name:	  	gnome-packagekit
-Version:	3.32.0
+Version:	43.0
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -55,7 +55,7 @@ D-Bus service for packages installation.
 %find_lang %{name} --with-gnome
 
 %files common -f %{name}.lang
-%{_datadir}/applications/gpk-install-*.desktop
+#{_datadir}/applications/gpk-install-*.desktop
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %dir %{_datadir}/gnome-packagekit
@@ -86,5 +86,6 @@ D-Bus service for packages installation.
 %{_mandir}/man1/gpk-update*
 %{_mandir}/man1/gpk-log*
 %{_datadir}/applications/gpk-log.desktop
-%{_datadir}/metainfo/*gnome*.appdata.xml
+%{_datadir}/metainfo/org.gnome.PackageUpdater.metainfo.xml
+%{_datadir}/metainfo/org.gnome.Packages.metainfo.xml
 
