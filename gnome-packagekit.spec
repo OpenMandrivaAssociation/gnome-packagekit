@@ -86,5 +86,5 @@ D-Bus service for packages installation.
 %{_mandir}/man1/gpk-update*
 %{_mandir}/man1/gpk-log*
 %{_datadir}/applications/gpk-log.desktop
-%{_datadir}/metainfo/*gnome*.appdata.xml
+#{_datadir}/metainfo/*gnome*.appdata.xml
 
