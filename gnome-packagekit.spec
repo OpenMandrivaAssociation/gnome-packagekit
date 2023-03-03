@@ -55,7 +55,7 @@ D-Bus service for packages installation.
 %find_lang %{name} --with-gnome
 
 %files common -f %{name}.lang
-%{_datadir}/applications/gpk-install-*.desktop
+#{_datadir}/applications/gpk-install-*.desktop
 %{_datadir}/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 %{_datadir}/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %dir %{_datadir}/gnome-packagekit
