@@ -6,7 +6,7 @@ Version:	43.0
 Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-Url:		http://www.packagekit.org
+Url:		https://www.packagekit.org
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/gnome-packagekit/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	docbook-dtd41-sgml
